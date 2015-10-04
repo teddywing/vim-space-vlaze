@@ -1,10 +1,18 @@
 function! space_vlaze#game#Init()
+	let s:loop = 1
 	let s:score = 0
 	let s:start_time = localtime()
 	call space_vlaze#game#SetupWindow()
 	call space_vlaze#colors#Initialize()
 	call space_vlaze#game#InitializeBoard()
 	call space_vlaze#mappings#Initialize()
+	
+	while s:loop ==# 1
+		sleep 50ms
+		call space_vlaze#mappings#Listen()
+		call space_vlaze#game#RenderBoard()
+		redraw!
+	endwhile
 endfunction
 
 
@@ -56,7 +64,28 @@ function! space_vlaze#game#RenderBoard()
 endfunction
 
 
+function! space_vlaze#game#Board()
+	return s:board
+endfunction
+
+
+function! space_vlaze#game#SetBoardCell(y, x, value)
+	let s:board[a:y][a:x] = a:value
+endfunction
+
+
+function! space_vlaze#game#PlayerY()
+	return s:PLAYER_Y
+endfunction
+
+function! space_vlaze#game#PlayerX()
+	return s:PLAYER_X
+endfunction
+
+
+
 function! space_vlaze#game#Quit()
+	let s:loop = -1
 endfunction
 
 

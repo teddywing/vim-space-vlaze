@@ -23,6 +23,8 @@ function! space_vlaze#game#SetupBoard()
 	let s:board = []
 	let s:BOARD_HEIGHT = 20
 	let s:BOARD_WIDTH = 80
+	let s:PLAYER_X = s:BOARD_WIDTH / 2 - 1
+	let s:PLAYER_Y = s:BOARD_HEIGHT / 2
 	
 	" Create 20-row by 80-column board initialised with spaces
 	let i = 0
@@ -40,7 +42,7 @@ function! space_vlaze#game#SetupBoard()
 	endwhile
 	
 	" Initialise player to the middle of the board
-	let s:board[s:BOARD_HEIGHT / 2][s:BOARD_WIDTH / 2 - 1] = space_vlaze#player#PlayerCharacter()
+	let s:board[s:PLAYER_Y][s:PLAYER_X] = space_vlaze#player#PlayerCharacter()
 endfunction
 
 

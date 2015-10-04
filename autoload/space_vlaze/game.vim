@@ -4,6 +4,7 @@ function! space_vlaze#game#Init()
 	call space_vlaze#game#SetupWindow()
 	call space_vlaze#colors#Initialize()
 	call space_vlaze#game#InitializeBoard()
+	call space_vlaze#mappings#Initialize()
 endfunction
 
 
@@ -50,4 +51,12 @@ function! space_vlaze#game#RenderBoard()
 		
 		let i += 1
 	endwhile
+endfunction
+
+
+function! space_vlaze#game#Quit()
+endfunction
+
+
+function! space_vlaze#game#Pause()
 endfunction

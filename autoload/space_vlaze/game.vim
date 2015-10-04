@@ -39,7 +39,7 @@ function! space_vlaze#game#SetupBoard()
 	endwhile
 	
 	" Initialise player to the middle of the board
-	let s:board[10][39] = space_vlaze#player#PlayerCharacter()
+	let s:board[s:BOARD_HEIGHT / 2][s:BOARD_WIDTH / 2 - 1] = space_vlaze#player#PlayerCharacter()
 endfunction
 
 

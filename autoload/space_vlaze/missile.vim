@@ -3,10 +3,14 @@ function! space_vlaze#missile#FireAll(y, x)
 	let missiles_firing = 1
 	let i = 1
 	while missiles_firing
-		let missiles_firing = missiles_firing && space_vlaze#missile#Move(a:y, a:x + i, 'right')
-		let missiles_firing = missiles_firing && space_vlaze#missile#Move(a:y, a:x - i, 'left')
-		let missiles_firing = missiles_firing && space_vlaze#missile#Move(a:y - i, a:x, 'top')
-		let missiles_firing = missiles_firing && space_vlaze#missile#Move(a:y + i, a:x, 'bottom')
+		let left = space_vlaze#missile#Move(a:y, a:x - i, 'left')
+		let bottom = space_vlaze#missile#Move(a:y + i, a:x, 'bottom')
+		let top = space_vlaze#missile#Move(a:y - i, a:x, 'top')
+		let right = space_vlaze#missile#Move(a:y, a:x + i, 'right')
+		
+		if !(left || bottom || top || right)
+			let missiles_firing = 0
+		endif
 		
 		sleep 20ms
 		

@@ -57,4 +57,10 @@ endfunction
 
 
 function! space_vlaze#player#FireBlasters()
+	" Fire top, right, bottom, left blasters
+	" A single missile fires in each direction
+	" The missile moves outward from the player to the edge of the board
+	" The missile stops when it hits an enemy or the edge of the board
+	
+	call space_vlaze#missile#FireAll(s:PLAYER_Y, s:PLAYER_X)
 endfunction

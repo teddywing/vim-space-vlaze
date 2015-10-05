@@ -70,8 +70,27 @@ function! space_vlaze#game#Board()
 endfunction
 
 
+function! space_vlaze#game#BoardCell(y, x)
+	return s:board[a:y][a:x]
+endfunction
+
+
 function! space_vlaze#game#SetBoardCell(y, x, value)
-	let s:board[a:y][a:x] = a:value
+	if space_vlaze#game#IsWithinBoard(a:y, a:x)
+		let s:board[a:y][a:x] = a:value
+	endif
+endfunction
+
+
+function! space_vlaze#game#IsBoardCellEmpty(y, x)
+	if space_vlaze#game#IsWithinBoard(a:y, a:x)
+		return s:board[a:y][a:x] ==# ' '
+	endif
+endfunction
+
+
+function! space_vlaze#game#IsWithinBoard(y, x)
+	return a:y >=# 0 && a:y <# s:BOARD_HEIGHT && a:x >=# 0 && a:x <# s:BOARD_WIDTH
 endfunction
 
 

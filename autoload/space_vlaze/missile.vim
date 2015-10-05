@@ -33,9 +33,9 @@ function! space_vlaze#missile#Move(y, x, direction)
 		let y -= 1
 	endif
 	
+	call space_vlaze#missile#ClearMissile(a:y, a:x)
+	
 	if space_vlaze#game#IsBoardCellEmpty(y, x)
-		call space_vlaze#missile#ClearMissile(a:y, a:x)
-		
 		call space_vlaze#game#SetBoardCell(
 			\ y,
 			\ x,

@@ -11,7 +11,6 @@ function! space_vlaze#game#Init()
 		sleep 50ms
 		call space_vlaze#mappings#Listen()
 		call space_vlaze#game#RenderBoard()
-		redraw!
 	endwhile
 endfunction
 
@@ -61,6 +60,8 @@ function! space_vlaze#game#RenderBoard()
 		
 		let i += 1
 	endwhile
+	
+	redraw!
 endfunction
 
 

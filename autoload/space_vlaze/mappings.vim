@@ -24,7 +24,7 @@ function! space_vlaze#mappings#Listen()
 		call space_vlaze#player#MoveUp()
 	elseif c ==# 'l'
 		call space_vlaze#player#MoveRight()
-	elseif c ==# '\<space>'
+	elseif c ==# ' '
 		call space_vlaze#player#FireBlasters()
 	endif
 endfunction

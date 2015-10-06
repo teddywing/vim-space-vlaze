@@ -2,6 +2,7 @@ function! space_vlaze#game#Init()
 	let s:loop = 1
 	let s:score = 0
 	let s:start_time = localtime()
+	let s:ticks = 1
 	call space_vlaze#game#SetupWindow()
 	call space_vlaze#colors#Initialize()
 	call space_vlaze#game#InitializeBoard()
@@ -10,7 +11,9 @@ function! space_vlaze#game#Init()
 	while s:loop ==# 1
 		sleep 50ms
 		call space_vlaze#mappings#Listen()
+		call space_vlaze#enemy#AddEnemiesToBoard()
 		call space_vlaze#game#RenderBoard()
+		let s:ticks += 1
 	endwhile
 endfunction
 
@@ -91,6 +94,21 @@ endfunction
 
 function! space_vlaze#game#IsWithinBoard(y, x)
 	return a:y >=# 0 && a:y <# s:BOARD_HEIGHT && a:x >=# 0 && a:x <# s:BOARD_WIDTH
+endfunction
+
+
+function! space_vlaze#game#BoardHeight()
+	return s:BOARD_HEIGHT
+endfunction
+
+
+function! space_vlaze#game#BoardWidth()
+	return s:BOARD_WIDTH
+endfunction
+
+
+function! space_vlaze#game#Ticks()
+	return s:ticks
 endfunction
 
 

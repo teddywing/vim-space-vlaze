@@ -10,7 +10,7 @@ endfunction
 
 
 function! space_vlaze#score#RenderScore()
-	let score_line = space_vlaze#game#BoardHeight() + 1
+	let score_line = space_vlaze#game#BoardHeight() + 2
 	
 	call setline(score_line, 'Score: ' . s:score)
 endfunction

@@ -7,6 +7,7 @@ function! space_vlaze#game#Init()
 	call space_vlaze#game#InitializeBoard()
 	call space_vlaze#mappings#Initialize()
 	call space_vlaze#score#Initialize()
+	call space_vlaze#life#Initialize()
 	
 	while s:loop ==# 1
 		sleep 50ms
@@ -14,6 +15,7 @@ function! space_vlaze#game#Init()
 		call space_vlaze#enemy#AddEnemiesToBoard()
 		call space_vlaze#game#RenderBoard()
 		call space_vlaze#score#RenderScore()
+		call space_vlaze#life#RenderLives()
 		let s:ticks += 1
 	endwhile
 endfunction

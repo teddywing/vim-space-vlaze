@@ -31,6 +31,7 @@ endfunction
 function! space_vlaze#player#MoveLeft()
 	call space_vlaze#player#ClearPlayerCell()
 	call space_vlaze#player#SetPlayerX(space_vlaze#player#PlayerX() - 1)
+	call space_vlaze#enemy#HandlePlayerCollision()
 	call space_vlaze#game#SetBoardCell(space_vlaze#player#PlayerY(), space_vlaze#player#PlayerX(), space_vlaze#player#PlayerCharacter())
 endfunction
 
@@ -38,6 +39,7 @@ endfunction
 function! space_vlaze#player#MoveDown()
 	call space_vlaze#player#ClearPlayerCell()
 	call space_vlaze#player#SetPlayerY(space_vlaze#player#PlayerY() + 1)
+	call space_vlaze#enemy#HandlePlayerCollision()
 	call space_vlaze#game#SetBoardCell(space_vlaze#player#PlayerY(), space_vlaze#player#PlayerX(), space_vlaze#player#PlayerCharacter())
 endfunction
 
@@ -45,6 +47,7 @@ endfunction
 function! space_vlaze#player#MoveUp()
 	call space_vlaze#player#ClearPlayerCell()
 	call space_vlaze#player#SetPlayerY(space_vlaze#player#PlayerY() - 1)
+	call space_vlaze#enemy#HandlePlayerCollision()
 	call space_vlaze#game#SetBoardCell(space_vlaze#player#PlayerY(), space_vlaze#player#PlayerX(), space_vlaze#player#PlayerCharacter())
 endfunction
 
@@ -52,6 +55,7 @@ endfunction
 function! space_vlaze#player#MoveRight()
 	call space_vlaze#player#ClearPlayerCell()
 	call space_vlaze#player#SetPlayerX(space_vlaze#player#PlayerX() + 1)
+	call space_vlaze#enemy#HandlePlayerCollision()
 	call space_vlaze#game#SetBoardCell(space_vlaze#player#PlayerY(), space_vlaze#player#PlayerX(), space_vlaze#player#PlayerCharacter())
 endfunction
 

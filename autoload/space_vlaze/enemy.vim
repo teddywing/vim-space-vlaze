@@ -58,17 +58,35 @@ function! space_vlaze#enemy#DropEnemyAtRandomCoordinates()
 endfunction
 
 
+function! space_vlaze#enemy#IsEnemyAtCell(y, x)
+	if space_vlaze#game#IsWithinBoard(a:y, a:x)
+		return space_vlaze#game#BoardCell(a:y, a:x) ==# space_vlaze#enemy#EnemyCharacter()
+	endif
+endfunction
+
+
 " Calling this function tells us that coordinates y, x were hit by a missile.
 " If an enemy lives at y, x, it needs to disappear and update the score.
 function! space_vlaze#enemy#HandleEnemyHitAt(y, x)
-	if space_vlaze#game#IsWithinBoard(a:y, a:x)
-		if space_vlaze#game#BoardCell(a:y, a:x) ==# space_vlaze#enemy#EnemyCharacter()
-			call space_vlaze#game#ClearBoardCell(a:y, a:x)
-			call space_vlaze#score#IncrementScore(
-				\ s:ENEMY_POINT_BASE * space_vlaze#enemy#PointMultiplier())
-			
-			return 1
-		endif
+	if space_vlaze#enemy#IsEnemyAtCell(a:y, a:x)
+		call space_vlaze#game#ClearBoardCell(a:y, a:x)
+		call space_vlaze#score#IncrementScore(
+			\ s:ENEMY_POINT_BASE * space_vlaze#enemy#PointMultiplier())
+		
+		return 1
+	endif
+endfunction
+
+
+" Determines whether the player has been hit by an enemy. If so decrements a
+" life from player.
+" 
+" Should be used on player and enemy movement.
+function! space_vlaze#enemy#HandlePlayerCollision()
+	if space_vlaze#enemy#IsEnemyAtCell(
+		\ space_vlaze#player#PlayerY(),
+		\ space_vlaze#player#PlayerX())
+		call space_vlaze#life#DecrementLives()
 	endif
 endfunction
 

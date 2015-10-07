@@ -43,6 +43,7 @@ function! space_vlaze#enemy#DropEnemyAtRandomCoordinates()
 	let y = player_y
 	let x = player_x
 	
+	" Don't drop enemy at the same coordinates as the player
 	while player_y ==# y && player_x ==# x
 		let y = space_vlaze#random#Random(space_vlaze#game#BoardHeight() - 1)
 		let x = space_vlaze#random#Random(space_vlaze#game#BoardWidth() - 1)

@@ -1,15 +1,26 @@
 " Fires all (4) missiles around an origin corrdinate (should be the player)
 function! space_vlaze#missile#FireAll(y, x)
-	let missiles_firing = 1
+	let left = 1
+	let bottom = 1
+	let top = 1
+	let right = 1
+	
 	let i = 1
-	while missiles_firing
-		let left = space_vlaze#missile#Move(a:y, a:x - i, 'left')
-		let bottom = space_vlaze#missile#Move(a:y + i, a:x, 'bottom')
-		let top = space_vlaze#missile#Move(a:y - i, a:x, 'top')
-		let right = space_vlaze#missile#Move(a:y, a:x + i, 'right')
+	while left || bottom || top || right
+		if left
+			let left = space_vlaze#missile#Move(a:y, a:x - i, 'left')
+		endif
 		
-		if !(left || bottom || top || right)
-			let missiles_firing = 0
+		if bottom
+			let bottom = space_vlaze#missile#Move(a:y + i, a:x, 'bottom')
+		endif
+		
+		if top
+			let top = space_vlaze#missile#Move(a:y - i, a:x, 'top')
+		endif
+		
+		if right
+			let right = space_vlaze#missile#Move(a:y, a:x + i, 'right')
 		endif
 		
 		sleep 20ms

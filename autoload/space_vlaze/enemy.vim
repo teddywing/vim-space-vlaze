@@ -12,6 +12,11 @@ if !exists('s:MIN_ENEMIES_ON_BOARD')
 endif
 
 
+if !exists('s:ENEMY_POINT_BASE')
+	let s:ENEMY_POINT_BASE = 1
+endif
+
+
 function! space_vlaze#enemy#AddEnemiesToBoard()
 	let ticks = space_vlaze#game#Ticks()
 	
@@ -59,8 +64,15 @@ function! space_vlaze#enemy#HandleEnemyHitAt(y, x)
 	if space_vlaze#game#IsWithinBoard(a:y, a:x)
 		if space_vlaze#game#BoardCell(a:y, a:x) ==# space_vlaze#enemy#EnemyCharacter()
 			call space_vlaze#game#ClearBoardCell(a:y, a:x)
+			call space_vlaze#score#IncrementScore(
+				\ s:ENEMY_POINT_BASE * space_vlaze#enemy#PointMultiplier())
 			
 			return 1
 		endif
 	endif
+endfunction
+
+
+function! space_vlaze#enemy#PointMultiplier()
+	return 1
 endfunction

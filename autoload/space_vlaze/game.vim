@@ -1,18 +1,19 @@
 function! space_vlaze#game#Init()
 	let s:loop = 1
-	let s:score = 0
 	let s:start_time = localtime()
 	let s:ticks = 1
 	call space_vlaze#game#SetupWindow()
 	call space_vlaze#colors#Initialize()
 	call space_vlaze#game#InitializeBoard()
 	call space_vlaze#mappings#Initialize()
+	call space_vlaze#score#Initialize()
 	
 	while s:loop ==# 1
 		sleep 50ms
 		call space_vlaze#mappings#Listen()
 		call space_vlaze#enemy#AddEnemiesToBoard()
 		call space_vlaze#game#RenderBoard()
+		call space_vlaze#score#RenderScore()
 		let s:ticks += 1
 	endwhile
 endfunction

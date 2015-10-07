@@ -85,6 +85,11 @@ function! space_vlaze#game#SetBoardCell(y, x, value)
 endfunction
 
 
+function! space_vlaze#game#ClearBoardCell(y, x)
+	call space_vlaze#game#SetBoardCell(a:y, a:x, ' ')
+endfunction
+
+
 function! space_vlaze#game#IsBoardCellEmpty(y, x)
 	if space_vlaze#game#IsWithinBoard(a:y, a:x)
 		return s:board[a:y][a:x] ==# ' '

@@ -24,7 +24,7 @@ endfunction
 
 
 function! space_vlaze#player#ClearPlayerCell()
-	call space_vlaze#game#SetBoardCell(space_vlaze#player#PlayerY(), space_vlaze#player#PlayerX(), ' ')
+	call space_vlaze#game#ClearBoardCell(space_vlaze#player#PlayerY(), space_vlaze#player#PlayerX())
 endfunction
 
 

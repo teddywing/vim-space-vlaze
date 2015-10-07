@@ -51,3 +51,16 @@ function! space_vlaze#enemy#DropEnemyAtRandomCoordinates()
 	
 	call space_vlaze#game#SetBoardCell(y, x, space_vlaze#enemy#EnemyCharacter())
 endfunction
+
+
+" Calling this function tells us that coordinates y, x were hit by a missile.
+" If an enemy lives at y, x, it needs to disappear and update the score.
+function! space_vlaze#enemy#HandleEnemyHitAt(y, x)
+	if space_vlaze#game#IsWithinBoard(a:y, a:x)
+		if space_vlaze#game#BoardCell(a:y, a:x) ==# space_vlaze#enemy#EnemyCharacter()
+			call space_vlaze#game#ClearBoardCell(a:y, a:x)
+			
+			return 1
+		endif
+	endif
+endfunction

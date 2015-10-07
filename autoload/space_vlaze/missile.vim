@@ -51,6 +51,8 @@ function! space_vlaze#missile#Move(y, x, direction)
 		call space_vlaze#game#RenderBoard()
 		
 		return 1
+	else
+		call space_vlaze#enemy#HandleEnemyHitAt(y, x)
 	endif
 	
 	return 0

@@ -1,1 +1,14 @@
+SpaceVlaze	space_vlaze.txt	/*SpaceVlaze*
+space_vlaze-<leader>sv	space_vlaze.txt	/*space_vlaze-<leader>sv*
+space_vlaze-<space>	space_vlaze.txt	/*space_vlaze-<space>*
+space_vlaze-commands	space_vlaze.txt	/*space_vlaze-commands*
+space_vlaze-gameplay	space_vlaze.txt	/*space_vlaze-gameplay*
+space_vlaze-h	space_vlaze.txt	/*space_vlaze-h*
+space_vlaze-introduction	space_vlaze.txt	/*space_vlaze-introduction*
+space_vlaze-j	space_vlaze.txt	/*space_vlaze-j*
+space_vlaze-k	space_vlaze.txt	/*space_vlaze-k*
+space_vlaze-l	space_vlaze.txt	/*space_vlaze-l*
+space_vlaze-license	space_vlaze.txt	/*space_vlaze-license*
+space_vlaze-mappings	space_vlaze.txt	/*space_vlaze-mappings*
+space_vlaze-q	space_vlaze.txt	/*space_vlaze-q*
 space_vlaze.vim	space_vlaze.txt	/*space_vlaze.vim*

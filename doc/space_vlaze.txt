@@ -1,8 +1,60 @@
-*space_vlaze.vim*	
+*space_vlaze.vim*	A space shooter game
 
+Author:  Teddy Wing <http://teddywing.com>
+License: MIT
+Version: 0.0.1
 
-INTRODUCTION
+==============================================================================
+INTRODUCTION                                        *space_vlaze-introduction*
+
 Captain Nolan and his crew on the Benten have completed a routine delivery
 mission to Chapek 9. As they make their way home through the Maze system,
 their ship is suddenly assailed by giant floating popcorn kernels! Help Nolan
 and the Benten pop the kernels before it's too late.
+
+==============================================================================
+COMMANDS                                                *space_vlaze-commands*
+
+:SpaceVlaze                                                       *SpaceVlaze*
+    Launch the game. A prompt appears to perform one of the following:
+
+	1. Play the game
+	2. Display the leaderboard
+	3. Show this help
+
+==============================================================================
+MAPPINGS                                                *space_vlaze-mappings*
+
+							*space_vlaze-<leader>sv*
+<leader>sv		Launch Space Vlaze.
+
+==============================================================================
+GAMEPLAY                                                *space_vlaze-gameplay*
+
+Take control of Captain Nolan and the Benten. Navigate the treacherous expanse
+of space avoiding or popping the fearsome kernels.
+
+							*space_vlaze-h*
+h			Move the Benten left.
+
+							*space_vlaze-j*
+j			Move the Benten down.
+
+							*space_vlaze-k*
+k			Move the Benten up.
+
+							*space_vlaze-l*
+l			Move the Benten right.
+
+							*space_vlaze-<space>*
+<space>			Fire missiles.
+
+							*space_vlaze-q*
+q			Quit the game.
+
+==============================================================================
+LICENSE                                                  *space_vlaze-license*
+
+Space Vlaze is released under the MIT license.
+
+ vim:tw=78:ts=8:ft=help:norl:

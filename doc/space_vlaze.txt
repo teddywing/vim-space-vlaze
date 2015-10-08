@@ -8,7 +8,7 @@ Version: 0.0.1
 INTRODUCTION                                        *space_vlaze-introduction*
 
 Captain Nolan and his crew on the Benten have completed a routine delivery
-mission to Chapek 9. As they make their way home through the Maze system,
+mission to Chapek 9. As they make their way home through the Mais system,
 their ship is suddenly assailed by giant floating popcorn kernels! Help Nolan
 and the Benten pop the kernels before it's too late.
 

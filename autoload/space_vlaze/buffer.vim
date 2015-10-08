@@ -6,8 +6,7 @@ function! space_vlaze#buffer#Init()
 		call space_vlaze#buffer#New()
 		call space_vlaze#menus#Start()
 	else
-		" enew
-		" execute 'b' 
+		execute 'b' . bufnr(s:buffer_name)
 	endif
 endfunction
 

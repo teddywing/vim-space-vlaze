@@ -59,6 +59,7 @@ function! space_vlaze#leaderboard#RenderLeaderboard()
 		let player_name = readfile(s:PLAYER_NAME_PATH)
 	endif
 	
+	call space_vlaze#game#SetupWindow()
 	
 _    ____ ____ ___  ____ ____ ___  ____ ____ ____ ___  
 |    |___ |__| |  \ |___ |__/ |__] |  | |__| |__/ |  \ 

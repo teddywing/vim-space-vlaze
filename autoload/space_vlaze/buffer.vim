@@ -4,10 +4,11 @@ function! space_vlaze#buffer#Init()
 	if !buflisted(s:buffer_name)
 		" call space_vlaze#game#Init()
 		call space_vlaze#buffer#New()
-		call space_vlaze#menus#Start()
 	else
 		execute 'b' . bufnr(s:buffer_name)
 	endif
+	
+	call space_vlaze#menus#Start()
 endfunction
 
 

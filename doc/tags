@@ -1,6 +1,7 @@
 SpaceVlaze	space_vlaze.txt	/*SpaceVlaze*
 space_vlaze-<leader>sv	space_vlaze.txt	/*space_vlaze-<leader>sv*
 space_vlaze-<space>	space_vlaze.txt	/*space_vlaze-<space>*
+space_vlaze-bugs	space_vlaze.txt	/*space_vlaze-bugs*
 space_vlaze-commands	space_vlaze.txt	/*space_vlaze-commands*
 space_vlaze-gameplay	space_vlaze.txt	/*space_vlaze-gameplay*
 space_vlaze-h	space_vlaze.txt	/*space_vlaze-h*

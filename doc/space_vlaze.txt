@@ -53,6 +53,15 @@ l			Move the Benten right.
 q			Quit the game.
 
 ==============================================================================
+BUGS                                                        *space_vlaze-bugs*
+
+* Enemies don't move
+* The max enemy count isn't handled correctly meaning that enemies can flood
+  the board
+* Firing missiles blocks gameplay until the missiles have disappeared or
+  exploded
+
+==============================================================================
 LICENSE                                                  *space_vlaze-license*
 
 Space Vlaze is released under the MIT license.

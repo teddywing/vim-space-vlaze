@@ -13,7 +13,7 @@ function! space_vlaze#mappings#Listen()
 	let c = nr2char(getchar(0))
 	
 	if c ==# 'q'
-		call space_vlaze#game#Quit()
+		call space_vlaze#game#GameOver()
 	elseif c ==# 'p'
 		call space_vlaze#game#Pause()
 	elseif c ==# 'h'

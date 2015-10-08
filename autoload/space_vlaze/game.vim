@@ -160,4 +160,7 @@ function! space_vlaze#game#GameOver()
 		let text_y += 1
 		let text_x = text_x_orig
 	endfor
+	
+	call space_vlaze#game#RenderBoard()
+	call space_vlaze#leaderboard#SaveHighScore()
 endfunction

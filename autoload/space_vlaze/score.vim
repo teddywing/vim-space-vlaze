@@ -3,6 +3,11 @@ function! space_vlaze#score#Initialize()
 endfunction
 
 
+function! space_vlaze#score#Score()
+	return s:score
+endfunction
+
+
 " Increment score by `num`
 function! space_vlaze#score#IncrementScore(num)
 	let s:score += a:num

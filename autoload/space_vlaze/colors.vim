@@ -8,4 +8,5 @@ function! space_vlaze#colors#Initialize()
 	highlight Player ctermfg=200 ctermbg=NONE
 	highlight Lives  ctermfg=255 ctermbg=89
 	highlight Score  ctermfg=255 ctermbg=92
+	highlight Normal ctermfg=255 ctermbg=235
 endfunction

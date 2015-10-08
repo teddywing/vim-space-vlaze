@@ -6,7 +6,7 @@ function! space_vlaze#menus#Start()
 	if choice ==? 's'
 		call space_vlaze#game#Init()
 	elseif choice ==? 'l'
-		call space_vlaze#leaderboard#Show()
+		call space_vlaze#leaderboard#RenderLeaderboard()
 	elseif choice ==? 'h'
 		call space_vlaze#help#Show()
 	endif

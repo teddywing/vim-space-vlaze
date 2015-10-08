@@ -5,6 +5,8 @@ function! space_vlaze#missile#FireAll(y, x)
 	let top = 1
 	let right = 1
 	
+	call space_vlaze#audio#PlayFireMissiles()
+	
 	let i = 1
 	while left || bottom || top || right
 		if left

@@ -18,3 +18,8 @@ endfunction
 function! space_vlaze#audio#PlayPlayerMove()
 	call space_vlaze#audio#Play('player-move.wav')
 endfunction
+
+
+function! space_vlaze#audio#PlayFireMissiles()
+	call space_vlaze#audio#Play('fire.wav')
+endfunction

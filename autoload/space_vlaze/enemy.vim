@@ -88,6 +88,7 @@ function! space_vlaze#enemy#HandlePlayerCollision()
 		\ space_vlaze#player#PlayerY(),
 		\ space_vlaze#player#PlayerX())
 		call space_vlaze#life#DecrementLives()
+		call space_vlaze#audio#PlayPlayerHit()
 	endif
 endfunction
 

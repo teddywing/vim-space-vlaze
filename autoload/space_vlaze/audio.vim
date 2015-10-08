@@ -20,6 +20,11 @@ function! space_vlaze#audio#PlayPlayerMove()
 endfunction
 
 
+function! space_vlaze#audio#PlayPlayerHit()
+	call space_vlaze#audio#Play('player-hit.wav')
+endfunction
+
+
 function! space_vlaze#audio#PlayFireMissiles()
 	call space_vlaze#audio#Play('fire.wav')
 endfunction

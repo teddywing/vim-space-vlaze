@@ -69,6 +69,7 @@ endfunction
 " If an enemy lives at y, x, it needs to disappear and update the score.
 function! space_vlaze#enemy#HandleEnemyHitAt(y, x)
 	if space_vlaze#enemy#IsEnemyAtCell(a:y, a:x)
+		call space_vlaze#audio#PlayEnemyDefeated()
 		call space_vlaze#game#ClearBoardCell(a:y, a:x)
 		call space_vlaze#score#IncrementScore(
 			\ s:ENEMY_POINT_BASE * space_vlaze#enemy#PointMultiplier())

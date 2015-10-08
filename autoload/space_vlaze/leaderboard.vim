@@ -34,8 +34,11 @@ endfunction
 " Sorting function that orders numbers from highest to lowest.
 " For use with the |sort()| Vim function
 function! space_vlaze#leaderboard#Sort(item1, item2)
-	return a:item1 ==# a:item2 ? 0 :
-		\ a:item1 ># a:item2 ? -1 : 1
+	let item1 = str2nr(a:item1)
+	let item2 = str2nr(a:item2)
+	
+	return item1 ==# item2 ? 0 :
+		\ item1 ># item2 ? -1 : 1
 endfunction
 
 

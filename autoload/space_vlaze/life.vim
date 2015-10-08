@@ -19,7 +19,7 @@ endfunction
 
 function! space_vlaze#life#RenderLives()
 	let lives_line = space_vlaze#game#BoardHeight() + 1
-	let lives_display = '|'
+	let lives_display = '| '
 	
 	let i = 0
 	while i < s:lives

@@ -127,3 +127,28 @@ endfunction
 
 function! space_vlaze#game#Pause()
 endfunction
+
+
+function! space_vlaze#game#GameOver()
+	call space_vlaze#game#Quit()
+	
+	let text = [
+		\ ['G', ' ', 'A', ' ', 'M', ' ', 'E'],
+		\ ['O', ' ', 'V', ' ', 'E', ' ', 'R'],
+	\ ]
+	
+	let text_y = s:BOARD_HEIGHT / 2
+	let text_x = s:BOARD_WIDTH / 2 - 2
+	let text_x_orig = text_x
+	
+	for line in text
+		for character in line
+			call space_vlaze#game#SetBoardCell(text_y, text_x, character)
+			
+			let text_x += 1
+		endfor
+		
+		let text_y += 1
+		let text_x = text_x_orig
+	endfor
+endfunction

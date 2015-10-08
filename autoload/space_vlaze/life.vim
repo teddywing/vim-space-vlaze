@@ -10,6 +10,10 @@ endfunction
 
 function! space_vlaze#life#DecrementLives()
 	let s:lives -= 1
+	
+	if s:lives ==# 0
+		call space_vlaze#game#GameOver()
+	endif
 endfunction
 
 

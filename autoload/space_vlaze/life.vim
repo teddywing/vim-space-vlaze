@@ -28,5 +28,7 @@ function! space_vlaze#life#RenderLives()
 		let i += 1
 	endwhile
 	
-	call setline(lives_line, lives_display)
+	let lives_padding = space_vlaze#padding#RightPadding(lives_display)
+	
+	call setline(lives_line, lives_display . lives_padding)
 endfunction

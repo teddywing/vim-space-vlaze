@@ -11,6 +11,8 @@ endfunction
 
 function! space_vlaze#score#RenderScore()
 	let score_line = space_vlaze#game#BoardHeight() + 2
+	let score_text = 'Score: ' . s:score
+	let score_padding = space_vlaze#padding#RightPadding(score_text)
 	
-	call setline(score_line, 'Score: ' . s:score)
+	call setline(score_line, score_text . score_padding)
 endfunction

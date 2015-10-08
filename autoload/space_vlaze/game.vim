@@ -22,7 +22,15 @@ endfunction
 
 
 function! space_vlaze#game#SetupWindow()
-	setlocal bufhidden=delete noswapfile nolazyredraw
+	setlocal buftype=nofile
+	setlocal bufhidden=wipe
+	setlocal noswapfile
+	setlocal nonumber
+	setlocal nolist
+	setlocal nowrap
+	setlocal nocursorline
+	setlocal nocursorcolumn
+	setlocal nolazyredraw
 endfunction
 
 

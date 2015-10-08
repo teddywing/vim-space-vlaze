@@ -29,6 +29,7 @@ endfunction
 
 
 function! space_vlaze#player#MoveLeft()
+	call space_vlaze#audio#PlayPlayerMove()
 	call space_vlaze#player#ClearPlayerCell()
 	call space_vlaze#player#SetPlayerX(space_vlaze#player#PlayerX() - 1)
 	call space_vlaze#enemy#HandlePlayerCollision()
@@ -37,6 +38,7 @@ endfunction
 
 
 function! space_vlaze#player#MoveDown()
+	call space_vlaze#audio#PlayPlayerMove()
 	call space_vlaze#player#ClearPlayerCell()
 	call space_vlaze#player#SetPlayerY(space_vlaze#player#PlayerY() + 1)
 	call space_vlaze#enemy#HandlePlayerCollision()
@@ -45,6 +47,7 @@ endfunction
 
 
 function! space_vlaze#player#MoveUp()
+	call space_vlaze#audio#PlayPlayerMove()
 	call space_vlaze#player#ClearPlayerCell()
 	call space_vlaze#player#SetPlayerY(space_vlaze#player#PlayerY() - 1)
 	call space_vlaze#enemy#HandlePlayerCollision()
@@ -53,6 +56,7 @@ endfunction
 
 
 function! space_vlaze#player#MoveRight()
+	call space_vlaze#audio#PlayPlayerMove()
 	call space_vlaze#player#ClearPlayerCell()
 	call space_vlaze#player#SetPlayerX(space_vlaze#player#PlayerX() + 1)
 	call space_vlaze#enemy#HandlePlayerCollision()

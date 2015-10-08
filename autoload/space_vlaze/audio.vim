@@ -13,3 +13,8 @@ endfunction
 function! space_vlaze#audio#PlayEnemyDefeated()
 	call space_vlaze#audio#Play('enemy-defeated.wav')
 endfunction
+
+
+function! space_vlaze#audio#PlayPlayerMove()
+	call space_vlaze#audio#Play('player-move.wav')
+endfunction

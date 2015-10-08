@@ -137,6 +137,7 @@ function! space_vlaze#game#GameOver()
 		\ ['O', ' ', 'V', ' ', 'E', ' ', 'R'],
 	\ ]
 	
+	" Put "Game Over" text in the middle of the board
 	let text_y = s:BOARD_HEIGHT / 2
 	let text_x = s:BOARD_WIDTH / 2 - 2
 	let text_x_orig = text_x

@@ -13,6 +13,11 @@ their ship is suddenly assailed by giant floating popcorn kernels! Help Nolan
 and the Benten pop the kernels before it's too late.
 
 ==============================================================================
+EXTERNAL DEPENDENCIES                      *space_vlaze-external-dependencies*
+
+* mplayer (optional): Needed to play game audio.
+
+==============================================================================
 COMMANDS                                                *space_vlaze-commands*
 
 :SpaceVlaze                                                       *SpaceVlaze*

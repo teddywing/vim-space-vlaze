@@ -1,0 +1,26 @@
+CHANGELOG
+=========
+
+v0.0.1 (finalised 2015.10.08, released 2015.10.13):
+	Exclusive private alpha release, created as a present for Flashnotes
+	employees.
+
+	Features:
+	* Player character that can move and fire missiles
+	* Enemy characters that spawn over time
+	* Player lives
+	* Basic scoring
+	* Missiles can defeat enemies and increment score
+	* Player-enemy collision reduces player life
+	* Leaderboard
+	* Help file documentation
+
+	Missing desired features:
+	* Enemy movement
+	* Point multipliers
+	* Networked high scores
+	* Firing missiles blocks gameplay until all missiles disappear from the
+	  board
+	* Enemies turn into popcorn pieces and stop moving when hit. These
+	  disappear after a short amount of time but if enough are collected
+	  they yield an extra life.

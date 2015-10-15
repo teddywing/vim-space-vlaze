@@ -1,6 +1,13 @@
 CHANGELOG
 =========
 
+v0.0.2 (2015.10.15):
+	First public alpha release.
+
+	* Minor update to help file tag
+	* Add README with demo gif
+	* Add CHANGELOG
+
 v0.0.1 (finalised 2015.10.08, released 2015.10.13):
 	Exclusive private alpha release, created as a present for Flashnotes
 	employees.

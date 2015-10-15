@@ -1,4 +1,4 @@
-*space_vlaze.vim*	A space shooter game
+*space_vlaze.txt*	A space shooter game
 
 Author:  Teddy Wing <http://teddywing.com>
 License: MIT
